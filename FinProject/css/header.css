@@ -1,0 +1,147 @@
+header {
+    background: rgb(20, 150, 190);
+    /** rgb(16, 120, 155); **/
+    color: white;
+    font: 1.0em Impact, sans-serif;
+    height: 45px;
+}
+
+header > span {
+    display: inline-block;
+    padding: 0 20px;
+    height: 45px;
+}
+
+.menu {
+    position: relative;
+    float: right;
+    margin-right: 5%;
+}
+.menu > ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    word-spacing: -2px;
+}
+.menu > ul > li {
+    display: inline-block;
+    word-spacing: initial;
+    margin-left: -1px;
+}
+.menu a {
+    display: block;
+    padding: 12px 15px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background: rgb(20, 150, 190);
+    border-bottom: 2px solid rgb(20, 150, 190);
+    font: bold 1.0em Verdana, sans-serif;
+    width: 100px;
+}
+.menu > ul > li {
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+.menu > ul > li:first-child {
+    border-left: 1px solid rgba(255,255,255,0.3);
+    margin-left: 100px;
+}
+.menu > ul > li:last-child {
+    border-right: 1px solid rgba(255,255,255,0.3);
+    border-left: 1px solid rgba(255,255,255,0.3);
+    margin-left: 100px;
+}
+.menu a:hover {
+    transition: 0.5s;
+    background: rgb(20, 150, 190);
+    background: linear-gradient(to top, rgb(15, 130, 170), rgb(20, 150, 190));
+    border-bottom: 2px solid white;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 150px;
+    z-index: 100;
+    list-style: none;
+ }
+.dropdown::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: -6px;
+    height: 6px;
+}
+
+.dropdown > li > a {
+    padding: 10px;
+    font: normal 1.0em Verdana, sans-serif;
+}
+.menu > ul > li:hover .dropdown {
+    display: block;
+}
+
+.contacts {
+    position: absolute;
+    top: 45px;
+    left: 25%;
+    width: 50%;
+    padding: 0;
+    border-radius: 0 0 15px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.contacts:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+.contacts > h3 {
+    display: inline-block;
+    margin: 0;
+    padding: 5px 30px;
+    font: 0.8em Verdana, sans-serif;
+}
+.contacts > h3 > a {
+    text-decoration: none;
+    color: white;
+
+}
+
+@media (max-width: 1150px) {
+    .menu a {
+        padding: 12px 10px;
+        font-size: 0.9em;
+        width: 90px;
+    }
+
+    .contacts > h3 {
+        font-size: 0.7em;
+        padding: 5px 20px;
+    }
+}
+@media (max-width: 1050px) {
+        .menu a {
+            padding: 12px 7px;
+            font-size: 0.8em;
+            width: 80px;
+        }
+        .contacts > h3 {
+            font-size: 0.6em;
+            padding: 5px 10px;
+        }
+}
+@media (max-width: 950px) {
+    .menu a {
+        padding: 14px 5px;
+        font-size: 0.7em;
+        width: 70px;
+    }
+    .menu > ul > li:last-child {
+        margin-left: 50px;
+    }
+}
+
